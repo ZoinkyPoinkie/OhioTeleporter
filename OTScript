@@ -13,7 +13,7 @@ local Window = OrionLib:MakeWindow({Name = "Ohio. Teleporter", HidePremium = fal
 --Player Tab--
 
 local PlayerTab = Window:MakeTab({
-	Name = "Player",
+	Name = "Teleports",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -331,6 +331,133 @@ tween:Play()
 })
 
 --Player Tab End--
+
+--Items Tab--
+
+local PlayerTab = Window:MakeTab({
+	Name = "Item Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local PlayerSection = PlayerTab:AddSection({
+	Name = "Important"
+})
+
+PlayerSection:AddButton({
+Name = "Police Keycard",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+-- Define the object text to check for
+local targetObjectText = "Police Armory Keycard" -- Replace with the actual object text you want to detect
+
+-- Access the specified folder
+local folder = game.Workspace:FindFirstChild("Game"):FindFirstChild("Entities"):FindFirstChild("ItemPickup")
+
+if folder then
+    for _, model in ipairs(folder:GetChildren()) do
+        if model:IsA("Model") then -- Ensure we're working with a Model
+            for _, part in ipairs(model:GetChildren()) do
+                if part:IsA("BasePart") then -- Ensure the item is a part
+                    -- Find the ProximityPrompt in the part
+                    local proximityPrompt = part:FindFirstChildOfClass("ProximityPrompt")
+                    
+                    if proximityPrompt then
+                        -- Print the ObjectText to verify it's being detected
+                        print("Found ProximityPrompt with ObjectText: " .. proximityPrompt.ObjectText)
+                        
+                        -- Check if the ObjectText matches the target text
+                        if proximityPrompt.ObjectText == targetObjectText then
+                            -- Tweening to the part's position
+                            local targetPosition = part.Position + Vector3.new(0, 3, 0) -- Offset to prevent collision
+                            local goal = {CFrame = CFrame.new(targetPosition)}
+
+                            local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out) -- Tween time of 0.5 seconds
+                            local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+                            
+                            -- Start the tween
+                            tween:Play()
+
+                            -- Wait for the tween to complete
+                            tween.Completed:Wait()
+                            
+                            print("Tweened to part with: " .. proximityPrompt.ObjectText) -- Confirmation message
+                            return -- Exit the script after teleporting
+                        end
+                    end
+                end
+            end
+        end
+    end
+    warn("No matching items found with the specified ObjectText.")
+else
+    warn("ItemPickup folder not found!")
+end
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Military Keycard",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+-- Define the object text to check for
+local targetObjectText = "Military Armory Keycard" -- Replace with the actual object text you want to detect
+
+-- Access the specified folder
+local folder = game.Workspace:FindFirstChild("Game"):FindFirstChild("Entities"):FindFirstChild("ItemPickup")
+
+if folder then
+    for _, model in ipairs(folder:GetChildren()) do
+        if model:IsA("Model") then -- Ensure we're working with a Model
+            for _, part in ipairs(model:GetChildren()) do
+                if part:IsA("BasePart") then -- Ensure the item is a part
+                    -- Find the ProximityPrompt in the part
+                    local proximityPrompt = part:FindFirstChildOfClass("ProximityPrompt")
+                    
+                    if proximityPrompt then
+                        -- Print the ObjectText to verify it's being detected
+                        print("Found ProximityPrompt with ObjectText: " .. proximityPrompt.ObjectText)
+                        
+                        -- Check if the ObjectText matches the target text
+                        if proximityPrompt.ObjectText == targetObjectText then
+                            -- Tweening to the part's position
+                            local targetPosition = part.Position + Vector3.new(0, 3, 0) -- Offset to prevent collision
+                            local goal = {CFrame = CFrame.new(targetPosition)}
+
+                            local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out) -- Tween time of 0.5 seconds
+                            local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+                            
+                            -- Start the tween
+                            tween:Play()
+
+                            -- Wait for the tween to complete
+                            tween.Completed:Wait()
+                            
+                            print("Tweened to part with: " .. proximityPrompt.ObjectText) -- Confirmation message
+                            return -- Exit the script after teleporting
+                        end
+                    end
+                end
+            end
+        end
+    end
+    warn("No matching items found with the specified ObjectText.")
+else
+    warn("ItemPickup folder not found!")
+end
+  	end    
+})
+
 
 --Credits Tab--
 
