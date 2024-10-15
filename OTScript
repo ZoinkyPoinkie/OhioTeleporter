@@ -189,7 +189,22 @@ tween:Play()
   	end    
 })
 
+PlayerSection:AddButton({
+Name = "Monkeys Home",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(1415.049683, 10.061895, -894.940552))}
 
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
 
 local PlayerSection = PlayerTab:AddSection({
 	Name = "Other"
