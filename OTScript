@@ -1,0 +1,351 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+OrionLib:MakeNotification({
+	Name = "Ohio.",
+	Content = "Teleporter Script By xtc4lyfe",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+local Window = OrionLib:MakeWindow({Name = "Ohio. Teleporter", HidePremium = false, SaveConfig = true, ConfigFolder = "Orion"})
+
+--Player Tab--
+
+local PlayerTab = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+local PlayerSection = PlayerTab:AddSection({
+	Name = "Gun Spawns"
+})
+
+PlayerSection:AddButton({
+Name = "AUG",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(1185.526001, 44.285511, -764.075256))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "SCAR",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(803.575378, 81.145111, -1210.130127))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Sawn Off",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(1196.173462, 40.185963, -434.278381))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Shopping Cart",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(931.753967, 6.392607, -908.907410))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+local PlayerSection = PlayerTab:AddSection({
+	Name = "Important"
+})
+
+
+PlayerSection:AddButton({
+Name = "Military Armory",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(407.500275, 15.190619, -1385.982056))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Police Armory",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(618.718323, 28.576933, -910.043579))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Gun Armory",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(674.613586, 6.284512, -686.056519))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Gun Armory 2",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(1588.781494, 6.284512, -614.730774))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Black Market",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(709.649719, -22.965759, -87.679268))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+
+
+local PlayerSection = PlayerTab:AddSection({
+	Name = "Other"
+})
+
+PlayerSection:AddButton({
+Name = "Jewlery Store Mine",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(1716.182495, 14.426558, -727.640198))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Bank",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(1081.279053, 8.208920, -343.694519))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+
+PlayerSection:AddButton({
+Name = "Hospital",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(1142.223267, 6.315884, -972.739014))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Furniture Store",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(949.032715, 7.389431, -782.017883))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Furniture Store 2",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(382.335999, -5.874932, -395.948944))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "Arcade",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(835.497437, 6.393061, -922.232727))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+PlayerSection:AddButton({
+Name = "No Exit Room",
+	Callback = function()
+      		local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local goal = {CFrame = CFrame.new(Vector3.new(829.407410, 6.147170, -682.498413))}
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tween = TweenService:Create(humanoidRootPart, tweenInfo, goal)
+tween:Play()
+
+  	end    
+})
+
+--Player Tab End--
+
+--Credits Tab--
+
+local PlayerTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+PlayerTab:AddParagraph("Discord","Xtc4lyfe")
+PlayerTab:AddParagraph("Github","ZoinkyPoinkie")
+
+--Credits Tab End--
+
+--Settings Tab--
+
+local SettingsTab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local SettingsSection = SettingsTab:AddSection({
+	Name = "Settings"
+})
+
+SettingsSection:AddButton({
+	Name = "Destroy UI",
+	Callback = function()
+        OrionLib:Destroy()
+  	end    
+})
+
+
+
+--Settings End--
+
+
+
+OrionLib:Init() --UI Lib End
