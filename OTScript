@@ -21,7 +21,14 @@ local PlayerTab = Window:MakeTab({
 
 
 local PlayerSection = PlayerTab:AddSection({
-	Name = "Gun Spawns"
+	Name = "Most Important"
+})
+
+PlayerSection:AddButton({
+Name = "open bank Vault",
+	Callback = function()
+      		fireproximityprompt(workspace.BankRobbery.VaultDoor.Door.Attachment.ProximityPrompt)
+  	end    
 })
 
 PlayerSection:AddButton({
